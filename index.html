@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numeros pseudo aleatorios</title>
+</head>
+<body>
+	<h2>METODO CONGRUENCIAL MULTIPLICATIVO</h2>
+	<hr>
+	<div style="float: right;">
+		<h3>formula: </h3>
+		<p>x[1] = (a*x[0])mod(m)</p>
+		<p>r[1] = x[1]/z</p>
+		<p>m = 2^g</p>
+		<p>a = 5+8*k</p>
+		<p>k = 0,1,2,...</p>
+		<p>x[0] = número impar</p>
+		<p>g = numero entero</p>
+	</div>
+	
+	g:<input type="text" id="g"><br>
+	k:<input type="text" id="k"><br>
+	x[0]:<input type="text" id="x" ><br>
+	n:<input type="text" id="n" ><br>
+	<button type="submit" id="enviar">generar</button><br><br>
+	<h4>Resultados: </h4><br><br>
+	<div id="outputDiv"></div>
+	<script>
+
+		document.getElementById('enviar').onclick = function(){
+			var x = [],r = [],m,a,z,h; 
+			x[0] = parseInt(document.getElementById('x').value);  
+			var d = datos();
+			var HTML = "<table border=1>";
+
+			m = Math.pow(2,d.g);
+			a = 5+8*d.k;
+			z = m-1;
+			HTML += "<tr><td>Raiz</td><td>Valor</td></tr>";
+			for (var i = 1; i <= d.n; i++) {
+				h = parseInt(a*x[i-1]);
+				x[i] = h%m;
+				r[i] = x[i]/z;
+				console.log(r[i]);
+			    HTML += "<tr><td>r"+i+"</td><td align=center>"+r[i]+"</td></tr>";
+			}
+
+			HTML += "</table>";
+			document.getElementById("outputDiv").innerHTML = HTML;
+
+		}
+
+		// funcion de retorno de datos
+		function datos(){
+			return{
+				g: parseInt(document.getElementById("g").value),
+				k: document.getElementById('k').value,
+				n: document.getElementById('n').value,
+			}
+		}
+	</script>
+</body>
+</html>
