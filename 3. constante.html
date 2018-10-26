@@ -26,17 +26,13 @@
 	</div>
 
 	<div class="container">
-		<h2 class="text-center">ALGORITMO MULTIPLICADOR CONSTANTE</h2><hr>
+		<h2 class="text-center title-custom">ALGORITMO MULTIPLICADOR CONSTANTE</h2><hr>
 		<div class="row">
 			<div class="col-md-4 ">
 				<h3>formula: </h3>
-				<!-- <p>x[1] = (a*x[0])mod(m)</p>
-				<p>r[1] = x[1]/z</p>
-				<p>m = 2^g</p>
-				<p>a = 5+8*k</p>
-				<p>k = 0,1,2,...</p>
-				<p>x[0] = número impar</p>
-				<p>g = numero entero</p> -->
+				<p>x[i] = constante*x[i-1]</p>
+				<p>c: numero contante</p>
+				<p>x[0] = valor semilla</p>
 				<p>n = numero de iteraciones</p>
 			</div>
 
@@ -46,7 +42,7 @@
 					<input type="text" id="n" class="form-control" value="10">
 				</div>
 				<div class="form-group mx-sm-3 mb-2 ">
-					<label for="constante" class="">constante:</label>
+					<label for="constante" class="">c:</label>
 					<input type="text" id="constante" class="form-control" value="6965">
 				</div>
 				<div class="form-group mx-sm-3 mb-2 ">

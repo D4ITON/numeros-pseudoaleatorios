@@ -23,7 +23,7 @@
   line-height: 0;
   height: 0;
 }
-#cssmenu {
+#cssmenu,.footer-custom {
   width: auto;
   border-bottom: 3px solid #47c9af;
   font-family: Raleway, sans-serif;
@@ -99,4 +99,30 @@
   min-width: 0;
   width: 50px;
   display: inline;
+}
+.minh-100 {
+  height: 100vh;
+}
+.custom-title{
+  font-size: 25px;
+  font-family: Raleway, sans-serif;
+}
+.footer-custom{
+  font-size: 15px;
+  color: blue;
+  font-weight: 600;
+}
+.title-custom{
+  padding-top: 25px;
+  color: #47c9af;
+  font-size: 20px;
+}
+.container-custom{
+  min-height: 100vh;
+}
+.btn-colored{
+  background: #47c9af;
+  color: white;
+  border-radius: 50px;
+
 }
