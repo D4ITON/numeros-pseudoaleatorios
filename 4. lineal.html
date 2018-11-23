@@ -81,9 +81,10 @@
 			HTML += "<tr><td >Raiz</td><td >Valor</td></tr>";
 			for (var i = 1; i <= d.n; i++) {
 				x[i]=(d.a*x[i-1]+d.c)%d.m;
-				r[i]=(x[i]/(d.m-1)).toFixed(4);  // esto recorta el numero de demicales
+				r[i]=parseFloat((x[i]/(d.m-1)).toFixed(4));  // esto recorta el numero de demicales
+				// x[i] = parseInt(digito);
 				console.log(r[i]);
-				HTML += "<tr><td>r"+i+"</td><td>"+r[i]+"</td></tr>";
+				HTML += "<tr><td>"+r[i]+"</td></tr>";
 			}
 
 			HTML += "</table>";
