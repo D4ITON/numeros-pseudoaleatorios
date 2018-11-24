@@ -124,5 +124,29 @@
   background: #47c9af;
   color: white;
   border-radius: 50px;
-
+}
+.box-body-secondpart{
+  height: 93%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  font-size: 13px;
+  /*padding-right: 10%;*/
+  /*align-items: flex-end;*/
+  flex-direction: column;
+  justify-content: center;
+  /*border-left: 1px solid #eee;*/
+}
+.title{
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.container .imagen{
+  /*background: red;*/
+  text-align: center;
+  align-self: center;
+}
+.container-custom{
+  min-width: 100vh;
 }
